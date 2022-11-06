@@ -1,0 +1,7 @@
+
+…
+java:S1488G"cImmediately return this expression instead of assigning it to the temporary variable "fournisseur".(Œ„«Èşÿÿÿÿ8¾—Ä¾Ã0
+h
+java:S2259O"MA "NullPointerException" could be thrown; "secteurActivite" is nullable here.(Ïİñûÿÿÿÿ
+I
+java:S1905 "'Remove this unnecessary cast to "List".(óæË¸øÿÿÿÿ8Óñ²¾Ã0
