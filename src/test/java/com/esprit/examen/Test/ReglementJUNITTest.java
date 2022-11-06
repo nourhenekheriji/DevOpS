@@ -61,9 +61,4 @@ class ReglementJUNITTest {
 		ReglementDTO retrived = r.retrieveReglement2((long) 5);
 	Assertions.assertEquals(1,retrived.getIdReglement());
 	}
-
-	
-	
-	
-	
 }

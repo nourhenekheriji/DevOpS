@@ -56,7 +56,7 @@ public class ReglementServiceImpl implements IReglementService {
 		try {
 			log.info("In Method addReglement :");
 
-			reglements = (List<Reglement>) reglementRepository.findAll();
+
 
 			log.info("out of Method addReglement with succes");
 		}catch (Exception e) {
