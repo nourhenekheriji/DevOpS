@@ -1,0 +1,31 @@
+version: "3"
+services:
+  mysql_database:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: nour
+      MYSQL_DATABASE: tpachato
+      MYSQL_USER: tpachat_user
+      MYSQL_PASSWORD: nour
+    volumes:
+      - mysql:/var/lib/mysql
+  spring-boot:
+    depends_on:
+      - mysql_database
+    image: nourhenekheriji/spring
+    restart: always
+    ports:
+      - 8089:8089
+    container_name: springboot
+  angular:
+    depends_on:
+      - angular
+    image: nourhenekheriji/angular
+    restart: always
+    ports:
+      - 80:80
+    container_name: angular
+
+
+
