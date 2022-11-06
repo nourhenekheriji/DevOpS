@@ -74,7 +74,7 @@ pipeline {
               }
 
 
-           stage("Email Notification"){
+        /*   stage("Email Notification"){
                   success {
 
                         emailext body: 'Pipeline build successfully', subject: 'Pipeline build', to: 'nourhenekh20@gmail.com'
@@ -83,7 +83,7 @@ pipeline {
 
                         emailext body: 'Pipeline build not success', subject: 'Pipeline build', to: 'nourhenekh20@gmail.com'
                       }
-            }
+            }*/
 
 
 	}
