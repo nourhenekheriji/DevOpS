@@ -16,7 +16,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.esprit.com.dto.ReglementDTO;
 import com.esprit.examen.entities.Reglement;
 
 import com.esprit.examen.repositories.ReglementRepository;
@@ -79,15 +78,6 @@ public class ReglementTest {
 		
 	}
 	
-	public void modifier(){
-		ReglementDTO reg= new ReglementDTO();
-		reg.setIdReglement(null);
-		//mock
-		when(reglementRepository.save(any())).thenReturn(reglementServiceImpl);	
-		//call function 
-		reglementServiceImpl.addANDupdate2(new ReglementDTO());
-		//assert
-		assertEquals(1L,reg.getIdReglement());
-}	
+
 	
 }
