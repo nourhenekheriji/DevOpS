@@ -45,7 +45,7 @@ pipeline {
                     stage('Build docker image'){
                                                  steps{
                                                      script{
-                                                        sh 'docker build -t nourhenekheriji/apline .'
+                                                        sh 'docker build -t nourhenekheriji/springBack .'
                                                      }
                                                  }
                                              }
@@ -62,15 +62,19 @@ pipeline {
 
                            steps {
                                 sh 'echo "Docker is pushing ...."'
-                               	sh 'docker push nourhenekheriji/apline'
+                               	sh 'docker push nourhenekheriji/springBack'
                                   }  }
 
 
 
+          stage('DOCKER COMPOSE') {
+                   steps {
+                      sh 'docker-compose up -d --build'
+                   }
+              }
 
 
-
-         /*  stage("Email Notification"){
+           stage("Email Notification"){
                   success {
 
                         emailext body: 'Pipeline build successfully', subject: 'Pipeline build', to: 'nourhenekh20@gmail.com'
@@ -79,7 +83,7 @@ pipeline {
 
                         emailext body: 'Pipeline build not success', subject: 'Pipeline build', to: 'nourhenekh20@gmail.com'
                       }
-            }*/
+            }
 
 
 	}
