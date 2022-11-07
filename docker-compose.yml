@@ -7,6 +7,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: tpachato
+    ports:
+      - 3306:3306
       #MYSQL_USER: tpachat_user
       #MYSQL_PASSWORD: nour
     #volumes:
@@ -18,10 +20,10 @@ services:
     restart: always
     ports:
       - 8089:8089
-    container_name: springboot
+    container_name: spring
   angular:
     depends_on:
-      - angular
+      - spring-boot
     image: nourhenekheriji/angular
     restart: always
     ports:
