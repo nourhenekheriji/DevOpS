@@ -1,6 +1,6 @@
 version: "3"
 services:
-  mysql_database:
+  database:
     image: mysql
     container_name: mysql
     restart: always
@@ -14,8 +14,8 @@ services:
     #volumes:
       #- mysql_database:/var/lib/mysql
   spring-boot:
-    #depends_on:
-      #- database
+    depends_on:
+      - database
     image: nourhenekheriji/springback
     restart: always
     ports:
