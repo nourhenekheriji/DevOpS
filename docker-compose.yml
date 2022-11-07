@@ -1,7 +1,7 @@
 version: "3"
 services:
   mysql_database:
-    image: mysql
+    image: mysql_database
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: nour
@@ -9,7 +9,7 @@ services:
       MYSQL_USER: tpachat_user
       MYSQL_PASSWORD: nour
     volumes:
-      - mysql:/var/lib/mysql
+      - mysql_database:/var/lib/mysql
   spring-boot:
     depends_on:
       - mysql_database
