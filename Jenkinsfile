@@ -43,12 +43,11 @@ pipeline {
 
 
                     stage('Build docker image'){
-                                                 steps{
-                                                     script{
-                                                        sh 'docker build -t nourhenekheriji/springBack .'
-                                                     }
-                                                 }
-                                             }
+                         steps{
+                                sh 'docker build -t nourhenekheriji/springBack .'
+
+                                      }
+                                         }
 
                                               stage('Docker login') {
 
