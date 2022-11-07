@@ -4,7 +4,7 @@ services:
     image: mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: nour
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: tpachato
       #MYSQL_USER: tpachat_user
       #MYSQL_PASSWORD: nour
