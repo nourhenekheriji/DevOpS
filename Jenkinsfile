@@ -44,7 +44,7 @@ pipeline {
 
                     stage('Build docker image'){
                          steps{
-                                sh 'docker build -t nourhenekheriji/springBack .'
+                                sh 'docker build -t nourhenekheriji/springback .'
 
                                       }
                                          }
@@ -61,7 +61,7 @@ pipeline {
 
                            steps {
                                 sh 'echo "Docker is pushing ...."'
-                               	sh 'docker push nourhenekheriji/springBack'
+                               	sh 'docker push nourhenekheriji/springback'
                                   }  }
 
 
