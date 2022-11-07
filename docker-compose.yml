@@ -8,8 +8,8 @@ services:
       MYSQL_DATABASE: tpachato
       MYSQL_USER: tpachat_user
       MYSQL_PASSWORD: nour
-    volumes:
-      - mysql_database:/var/lib/mysql
+    #volumes:
+      #- mysql_database:/var/lib/mysql
   spring-boot:
     depends_on:
       - mysql_database
