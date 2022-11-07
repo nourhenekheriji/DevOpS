@@ -2,6 +2,7 @@ version: "3"
 services:
   mysql_database:
     image: mysql
+    container_name: mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -12,7 +13,7 @@ services:
       #- mysql_database:/var/lib/mysql
   spring-boot:
     depends_on:
-      - mysql
+      - database
     image: nourhenekheriji/springback
     restart: always
     ports:
