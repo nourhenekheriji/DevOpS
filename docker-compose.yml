@@ -21,14 +21,7 @@ services:
     ports:
       - 8089:8089
     container_name: spring
-  angular:
-    depends_on:
-      - spring-boot
-    image: nourhenekheriji/angular
-    restart: always
-    ports:
-      - 80:80
-    container_name: angular
+
 
 
 
