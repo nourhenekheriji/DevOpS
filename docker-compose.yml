@@ -8,7 +8,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: tpachato
     ports:
-      - 3306:3306
+      - 3308:3308
       #MYSQL_USER: tpachat_user
       #MYSQL_PASSWORD: nour
     #volumes:
