@@ -4,9 +4,11 @@ pipeline {
             stage('Checkout GIT'){
                 steps{
                     echo 'Pulling...';
-                    git branch: 'main',
+                   // git branch: 'main',
+                    git branch:'nourheneBack'
                    // credentialsId: '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',
-                    url : 'https://github.com/nourhenekheriji/DevOpS.git';
+                  //  url : 'https://github.com/nourhenekheriji/DevOpS.git';
+                    url :'https://github.com/khalsibadis/devOps-Backend.git'
                              }
                              }
 
